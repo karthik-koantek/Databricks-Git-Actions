@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Development
+  
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
@@ -31,6 +32,8 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       with:
         terraform_version: 1.0.9
+        TF_VAR_username: ${{ secrets.TF_USERNAME }}
+        TF_VAR_password: ${{ secrets.TF_PASSWORD }}
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
     - name: Terraform Init
