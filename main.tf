@@ -5,7 +5,7 @@ variable "username" {
 }
 
 variable "password" {
-  description = "The code of the password to use."
+  description = "The code of the password databricks to use."
   type = string
   default = ""
 }
