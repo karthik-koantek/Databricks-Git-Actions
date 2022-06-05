@@ -32,11 +32,6 @@ jobs:
       uses: hashicorp/setup-terraform@v1
       with:
         terraform_version: 1.0.9
-        
-    - name: Configure Databricks Creds
-      with:
-        username: ${{secrets.USERNAME}}
-        password: ${{secrets.password}}
     
 
     # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
