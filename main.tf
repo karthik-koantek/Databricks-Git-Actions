@@ -1,3 +1,16 @@
+variable "username" {
+  description = "The code of the AWS Region to use."
+  type = string
+  default = ""
+}
+
+variable "password" {
+  description = "The code of the AWS Region to use."
+  type = string
+  default = ""
+}
+
+
 variable "aws_region" {
   description = "The code of the AWS Region to use."
   type = string
@@ -24,8 +37,8 @@ provider "aws" {
 
 provider "databricks" {
   //profile = var.databricks_connection_profile
-  username = "xxxxxx"
-  password = "xxxxx"
+    username = "${var.username}"
+  password = "${var.password}"
   host = "xxxxxx"
 }
 
