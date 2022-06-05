@@ -38,7 +38,7 @@ variable "resource_prefix" {
 variable "email_notifier" {
   description = "The email address to send job status to"
   type = list(string)
-  default = ["karthik@koantek.com"]
+  default = ["xxxxx"]
 }
 
 data "databricks_node_type" "smallest" {
