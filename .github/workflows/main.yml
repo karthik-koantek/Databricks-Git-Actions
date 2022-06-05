@@ -48,11 +48,13 @@ jobs:
       env:
         TF_VAR_username: ${{ secrets.USERNAME }}
         TF_VAR_password: ${{ secrets.PASSWORD }}
+        TF_VAR_host: ${{ secrets.HOST }}
 
     - name: Terraform Apply
       env:
         TF_VAR_username: ${{ secrets.USERNAME }}
         TF_VAR_password: ${{ secrets.PASSWORD }}
+        TF_VAR_host: ${{ secrets.HOST }}
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -input=false -auto-approve
   Deploy-Staging:
@@ -88,7 +90,15 @@ jobs:
     # Generates an execution plan for Terraform
     - name: Terraform Plan
       run: terraform plan -input=false
+      env:
+        TF_VAR_username: ${{ secrets.USERNAME }}
+        TF_VAR_password: ${{ secrets.PASSWORD }}
+        TF_VAR_host: ${{ secrets.HOST }}
 
     - name: Terraform Apply
+      env:
+        TF_VAR_username: ${{ secrets.USERNAME }}
+        TF_VAR_password: ${{ secrets.PASSWORD }}
+        TF_VAR_host: ${{ secrets.HOST }}
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -input=false -auto-approve
