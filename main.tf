@@ -1,5 +1,5 @@
 variable "username" {
-  description = "The code of the AWS Region to use."
+  description = "The code of the Databricks user to use."
   type = string
   default = ""
 }
