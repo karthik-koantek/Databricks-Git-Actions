@@ -24,9 +24,9 @@ provider "aws" {
 
 provider "databricks" {
   //profile = var.databricks_connection_profile
-  username = "karthik@koantek.com"
-  password = "Welcome@2022"
-  host = "https://dbc-d513a31f-8fcc.cloud.databricks.com/"
+  username = "xxxxxx"
+  password = "xxxxx"
+  host = "xxxxxx"
 }
 
 variable "resource_prefix" {
