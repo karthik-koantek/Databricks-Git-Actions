@@ -50,6 +50,9 @@ jobs:
         TF_VAR_password: ${{ secrets.PASSWORD }}
 
     - name: Terraform Apply
+      env:
+        TF_VAR_username: ${{ secrets.USERNAME }}
+        TF_VAR_password: ${{ secrets.PASSWORD }}
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -input=false -auto-approve
   Deploy-Staging:
