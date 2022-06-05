@@ -39,7 +39,7 @@ provider "databricks" {
   //profile = var.databricks_connection_profile
     username = "${var.username}"
   password = "${var.password}"
-  host = "xxxxxx"
+  host = "${var.host}"
 }
 
 variable "resource_prefix" {
