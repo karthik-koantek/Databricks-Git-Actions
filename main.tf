@@ -43,8 +43,8 @@ provider "aws" {
 
 provider "databricks" {
   //profile = var.databricks_connection_profile
-    username = "karthik@koantek.com"
-  password = "Welcome@2022"
+    username = "xxxxx"
+  password = "xxxxx"
   host = "https://dbc-575732b3-dca6.cloud.databricks.com/"
 }
 
