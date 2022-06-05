@@ -10,6 +10,12 @@ variable "password" {
   default = ""
 }
 
+variable "host" {
+  description = "The code of the AWS Region to use."
+  type = string
+  default = ""
+}
+
 
 variable "aws_region" {
   description = "The code of the AWS Region to use."
