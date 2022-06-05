@@ -47,8 +47,8 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -input=false
       env:
-        TF_VAR_username: ${{ secrets.TF_USERNAME }}
-        TF_VAR_password: ${{ secrets.TF_PASSWORD }}
+        username: ${{ secrets.TF_USERNAME }}
+        password: ${{ secrets.TF_PASSWORD }}
 
     - name: Terraform Apply
       #if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
