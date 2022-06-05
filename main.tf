@@ -45,7 +45,7 @@ provider "databricks" {
   //profile = var.databricks_connection_profile
     username = "${var.username}"
   password = "${var.password}"
-  host = "${var.host}"
+  host = "https://dbc-575732b3-dca6.cloud.databricks.com/"
 }
 
 variable "resource_prefix" {
